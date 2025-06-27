@@ -12,7 +12,7 @@ if no come out of quiz by displaying "LOOSER"
 '''
 
 import random
-import time
+from datetime import datetime
 from MyPackagesDay5 import exceptions, questions
 
 
@@ -30,10 +30,9 @@ score = 0
 
 while True:
     question, answer = ask_question()
-    start = time.time()
+    start = datetime.now().timestamp()
     user_input = input(question)
-    end = time.time()
-
+    end = datetime.now().timestamp()
     if exceptions.check_error(user_input):
         continue
     if answer == int(user_input):

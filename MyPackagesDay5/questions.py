@@ -1,6 +1,5 @@
 import random
 
-
 def generate_square_question():
     num = random.randint(1, 100)
     question = f'What is the square of {num}? '
