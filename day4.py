@@ -35,12 +35,15 @@ try:
     print("valid email")
 except InvalidEmailError as e:
     print(e)
-
-with open("students.csv", "w+", newline="") as fi:
-    cursor = csv.writer(fi)
-    fi.writelines(["Name", "Age"])
-    reader = csv.reader(fi)
-    print(reader)
+'''
+with open("students.csv", "w+", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age"])
+    file.seek(0)
+    reader = csv.reader(file)
+    for row in reader:
+    print(row)
+'''
 with open('people.json',"r" ) as fi:
     loaded = json.load(fi)
     print(loaded)
